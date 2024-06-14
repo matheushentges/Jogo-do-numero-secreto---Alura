@@ -1,4 +1,4 @@
-/*
+
 //Crie uma função que calcule o índice de massa corporal (IMC) 
 //de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
 function calculaImc(peso, altura) {
@@ -63,8 +63,7 @@ function calcularAreaPerimetroSalaCircular(raio) {
   // Exemplo de uso
   let raio = 4; // em metros
   calcularAreaPerimetroSalaCircular(raio);
-  */
-
+ 
   //Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
 
   function mostraTabuada(numero) {
