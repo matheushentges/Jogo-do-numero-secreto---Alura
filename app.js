@@ -1,18 +1,25 @@
+let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = geraNumero();
 let tentativas = 1;
 
+
+//essa function ira pegar a tag e  substituir por um texto, a tag é a tag do HTML e o texto é o que vou passar
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
 
+//aqui  eu chamo a function anterior, inserindo os textos iniciais na tela, acionando a function
 function exibirMensagemInicial() {
     exibirTextoNaTela("h1", "Jogo do número secreto");
     exibirTextoNaTela("p", "Tente adivinhar o número secreto entre 1 e 10");
 }
 
+//até aqui é o inicio das funçoes que irao mostrar as coisas iniciais na tela do usuário, pra baixo comeca as func do jogo 
 
-function verificarChute(params) {
+//aqui comeca a funcao de gerar o numero secreto e montar os textos pra exibir na tela, varias vezes chama a function exibirtextonatela
+function verificarChute() {
     let chute = document.querySelector("input").value;
     if (chute == numeroSecreto) {
         exibirTextoNaTela("h1","Acertou!");
@@ -27,20 +34,35 @@ function verificarChute(params) {
         else {
             exibirTextoNaTela("p","O número secreto é maior!");
         }
-        tentativas ++
+        tentativas++
         limparCampo();
     }
 }
 
+
+//aqui fica a funcao de gerar numero
 function geraNumero() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+    if (quantidadeDeElementosNaLista == numeroLimite) {
+        listaDeNumerosSorteados = [];
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return geraNumero();
+    } else{
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
 }
 
+//funcao para limpar o campo input apos o usuario mandar o numero para verificacao
 function limparCampo() {
     chute = document.querySelector("input");
     chute.value = "";
 }
 
+//funcao resetando o jogo e redefinindo os campos
 function reiniciarJogo() {
     numeroSecreto = geraNumero();
     limparCampo();
@@ -48,4 +70,7 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById("reiniciar").setAttribute("disabled",true);
 }
+
+
 exibirMensagemInicial()
+

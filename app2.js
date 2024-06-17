@@ -1,4 +1,4 @@
-
+/*
 //Crie uma função que calcule o índice de massa corporal (IMC) 
 //de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
 function calculaImc(peso, altura) {
@@ -77,3 +77,31 @@ function calcularAreaPerimetroSalaCircular(raio) {
   // Exemplo de uso
 let numeroinformado = 7;
 mostraTabuada(numeroinformado);
+
+//array sempre comeca em zero
+
+let numeroSorteados = [0,1,2,3,4,5,6,7,8,9,10]
+console.log(numeroSorteados);
+
+
+//posso pegar o ultimo item da lista usando o -1 dentro da lista.length, exemplo abaixo, vai retornar  c#, posso tambem pegar de tras pra frente, apenas diminuindo os
+//valores das casas, como -2, -3 e por ai vai
+let linguagens = ["JS", "Java", "php", "C++", "c#"]
+console.log(linguagens[linguagens.length-1]);
+
+*/
+
+
+let listaGenerica = [];
+console.log(listaGenerica.length);
+
+let linguagensDeProgramacao = ["JS", "C", "C++", "Kotlin", "Python"];
+console.log(linguagensDeProgramacao);
+
+linguagensDeProgramacao.push("Java", "Ruby", "GoLang");
+console.log(linguagensDeProgramacao);
+
+let nomes = ["Matheus", "Mariely", "Amora"]
+console.log(nomes[0]);
+console.log(nomes[1]);
+console.log(nomes[nomes.length-1]);
