@@ -104,4 +104,4 @@ console.log(linguagensDeProgramacao);
 let nomes = ["Matheus", "Mariely", "Amora"]
 console.log(nomes[0]);
 console.log(nomes[1]);
-console.log(nomes[nomes.length-1]);
+console.log(nomes[nomes.length-1]); 
