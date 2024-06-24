@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 100;
+let numeroLimite = 50;
 let numeroSecreto = geraNumero();
 let tentativas = 1;
 
@@ -43,7 +43,7 @@ function verificarChute() {
 
 //aqui fica a funcao de gerar numero
 function geraNumero() {
-    let numeroEscolhido = parseInt(Math.random() * 100 + 1);
+    let numeroEscolhido = parseInt(Math.random() * 50 + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
     if (quantidadeDeElementosNaLista == numeroLimite) {
         listaDeNumerosSorteados = [];
