@@ -91,6 +91,7 @@ console.log(linguagens[linguagens.length-1]);
 
 */
 
+/*
 
 let listaGenerica = [];
 console.log(listaGenerica.length);
@@ -105,3 +106,11 @@ let nomes = ["Matheus", "Mariely", "Amora"]
 console.log(nomes[0]);
 console.log(nomes[1]);
 console.log(nomes[nomes.length-1]); 
+*/
+
+
+function calculaImc(peso, altura) {
+  return (peso/(altura*2));
+}
+let resultadoImc = calculaImc(100, 1.87);
+console.log(resultadoImc);
